@@ -21,12 +21,31 @@
 
 package es.javautodidacta.draganddraw;
 
-import android.support.v4.app.Fragment;
+import android.graphics.PointF;
 
-public class DragAndDrawActivity extends SingleFragmentActivity {
+/**
+ * This class ...
+ *
+ * @author Miguel Callejón Berenguer
+ * @version 2018.06
+ */
+public class Box {
+    private PointF mOrigin;
+    private PointF mCurrent;
 
-    @Override
-    protected Fragment createFragment() {
-        return DragAndDrawFragment.newInstance();
+    public Box(PointF origin) {
+        mOrigin = origin;
+    }
+
+    public PointF getOrigin() {
+        return mOrigin;
+    }
+
+    public PointF getCurrent() {
+        return mCurrent;
+    }
+
+    public void setCurrent(PointF current) {
+        mCurrent = current;
     }
 }
